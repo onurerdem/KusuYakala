@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Catch The Bird</string>
+    <string name="oyna">Play</string>
+    <string name="adınızı_giriniz">Enter your nickname.</string>
+    <string name="kaydet">SAVE</string>
+    <string name="çıkış">EXIT</string>
+    <string name="kalan_süre">"Remaining Time: "</string>
+    <string name="puanın">Score: 0</string>
+    <string name="puanın2">"Score: "</string>
+    <string name="tekrar">AGAIN</string>
+    <string name="tekrar_dene">Try Again</string>
+    <string name="tekrar_denemek_istediğinize_emin_misiniz">Are you sure you want to try again?</string>
+    <string name="ana_menü">The Main Menu</string>
+    <string name="en_yüksek_puan">The highest score: 0</string>
+    <string name="en_yüksek_puan2">"The highest score: "</string>
+    <string name="yeni_en_yüksek_puan">"New highest score: "</string>
+    <string name="çıkmak_istediğinize_emin_misiniz">Are you sure you want to exit?</string>
+    <string name="evet">YES</string>
+    <string name="hayır">NO</string>
+    <string name="dikkat">ATTENTION!</string>
+    <string name="lütfen_adınızı_giriniz">Enter your nickname,please.</string>
+    <string name="tamam">OK</string>
+    <string name="adınızın_uzunluğu_3_karakterden_küçük_olamaz">Your name\'s length can\'t be shorter than 3 characters!</string>
+    <string name="adınızın_uzunluğu_15_karakterden_büyük_olamaz">Your name\'s length can\'t be longer than 15 characters!</string>
+    <string name="kaydetmek_istediğinize_emin_misiniz">Are you sure you want to save?</string>
+    <string name="süre_bitti">Time\'s Up!</string>
+    <string name="dil">LANGUAGE</string>
+    <string name="türkçe">Türkçe</string>
+    <string name="english">English</string>
+    <string name="kullanmak_istediğiniz_dili_seçebilirsiniz">You can select the language you want to use.</string>
+</resources>

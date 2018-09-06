@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Kuşu Yakala</string>
+    <string name="adınızı_giriniz">Adınızı giriniz.</string>
+    <string name="oyna">Oyna</string>
+    <string name="kaydet">KAYDET</string>
+    <string name="çıkış">ÇIKIŞ</string>
+    <string name="kalan_süre">"Kalan Süre: "</string>
+    <string name="puanın">Puanın: 0</string>
+    <string name="puanın2">"Puanın: "</string>
+    <string name="tekrar">TEKRAR</string>
+    <string name="tekrar_dene">Tekrar Dene</string>
+    <string name="tekrar_denemek_istediğinize_emin_misiniz">Tekrar denemek istediğinize emin misiniz?</string>
+    <string name="ana_menü">Ana Menü</string>
+    <string name="en_yüksek_puan">En yüksek puan: 0</string>
+    <string name="en_yüksek_puan2">"En yüksek puan: "</string>
+    <string name="yeni_en_yüksek_puan">"Yeni en yüksek puan: "</string>
+    <string name="çıkmak_istediğinize_emin_misiniz">Çıkmak istediğinize emin misiniz?</string>
+    <string name="evet">EVET</string>
+    <string name="hayır">HAYIR</string>
+    <string name="dikkat">DİKKAT!</string>
+    <string name="lütfen_adınızı_giriniz">Lütfen adınızı giriniz.</string>
+    <string name="tamam">TAMAM</string>
+    <string name="adınızın_uzunluğu_3_karakterden_küçük_olamaz">Adınızın uzunluğu 3 karakterden küçük olamaz!</string>
+    <string name="adınızın_uzunluğu_15_karakterden_büyük_olamaz">Adınızın uzunluğu 15 karakterden büyük olamaz!</string>
+    <string name="kaydetmek_istediğinize_emin_misiniz">Kaydetmek istediğinize emin misiniz?</string>
+    <string name="süre_bitti">Süre Bitti!</string>
+    <string name="dil">DİL</string>
+    <string name="kullanmak_istediğiniz_dili_seçebilirsiniz">Kullanmak istediğiniz dili seçebilirsiniz.</string>
+    <string name="türkçe">Türkçe</string>
+    <string name="english">English</string>
+</resources>
