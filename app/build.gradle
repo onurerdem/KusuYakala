@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
     defaultConfig {
         applicationId "com.onurerdem.KusuYakala"
         minSdkVersion 15
-        targetSdkVersion 33
-        versionCode 3
-        versionName "1.2"
+        targetSdkVersion 34
+        versionCode 4
+        versionName "1.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

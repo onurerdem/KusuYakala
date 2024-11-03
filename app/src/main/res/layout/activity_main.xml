@@ -28,7 +28,7 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="354dp"
+        android:layout_width="380dp"
         android:layout_height="60dp"
         android:layout_marginTop="72dp"
         android:digits="0123456789abcçdefgğhıijklmnoöprsştuüvyzqwxABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZQWX"

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Locale;
 import java.util.Random;
 
 public class KusuYakala extends AppCompatActivity {
@@ -46,6 +48,12 @@ public class KusuYakala extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        String language = getIntent().getStringExtra("dil");
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         setContentView(R.layout.kusuyakala);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -97,10 +105,50 @@ public class KusuYakala extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent ana_menu = new Intent(this,MainActivity.class);
-        ana_menu.addCategory(Intent.CATEGORY_HOME);
-        ana_menu.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(ana_menu);
+        /*AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("ÇIKIŞ");
+        builder.setMessage("Çıkmak istediğinize emin misiniz?");
+        builder.setNegativeButton("HAYIR", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int id) {
+            }
+        });
+        builder.setPositiveButton("EVET", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                Intent ana_menu = new Intent(KusuYakala.this,MainActivity.class);
+                ana_menu.addCategory(Intent.CATEGORY_HOME);
+                ana_menu.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(ana_menu);
+            }
+        });
+        builder.show();*/
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.uyari);
+        Button button6 = (Button) dialog.findViewById(R.id.button6);
+        Button button7 = (Button) dialog.findViewById(R.id.button7);
+        TextView textAlert = (TextView) dialog.findViewById(R.id.textAlert);
+        TextView textTitle = (TextView) dialog.findViewById(R.id.textTitle);
+        ImageView kus = (ImageView) dialog.findViewById(R.id.imageView10);
+        textTitle.setText(R.string.çıkış);
+        textAlert.setText(R.string.çıkmak_istediğinize_emin_misiniz);
+        button6.setText(R.string.evet);
+        button7.setText(R.string.hayır);
+        kus.setImageResource(R.drawable.kus);
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ana_menu = new Intent(KusuYakala.this,MainActivity.class);
+                ana_menu.addCategory(Intent.CATEGORY_HOME);
+                ana_menu.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(ana_menu);
+            }
+        });
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
     public void increaseScore(View view) {
 
@@ -188,6 +236,7 @@ public class KusuYakala extends AppCompatActivity {
                 Intent tekrar_dene = new Intent(KusuYakala.this, KusuYakala.class);
                 tekrar_dene.addCategory(Intent.CATEGORY_HOME);
                 tekrar_dene.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                tekrar_dene.putExtra("dil", getIntent().getStringExtra("dil"));
                 startActivity(tekrar_dene);
                 dialog.dismiss();
             }

@@ -29,4 +29,5 @@
     <string name="türkçe">Türkçe</string>
     <string name="english">English</string>
     <string name="kullanmak_istediğiniz_dili_seçebilirsiniz">You can select the language you want to use.</string>
+    <string name="lütfen_adınızı_kaydediniz_ya_da_kayıtlı_adınızı_giriniz">Please register your name or enter your registered name.</string>
 </resources>

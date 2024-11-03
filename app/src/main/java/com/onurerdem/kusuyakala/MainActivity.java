@@ -96,10 +96,42 @@ public class MainActivity extends AppCompatActivity {
     public void Oyna(View view){
         editText = (EditText) findViewById(R.id.editText);
         if(editText.getText().toString().trim().length()>=3 && editText.getText().toString().trim().length()<=15) {
-            Intent oyna = new Intent(this, KusuYakala.class);
-            oyna.addCategory(Intent.CATEGORY_HOME);
-            oyna.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(oyna);
+            if (editText.getText().toString().equals(preferences.getString("ad", ""))) {
+                Intent oyna = new Intent(this, KusuYakala.class);
+                oyna.addCategory(Intent.CATEGORY_HOME);
+                oyna.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                oyna.putExtra("dil", preferences2.getString("dil", ""));
+                startActivity(oyna);
+            }
+            else {
+                /*AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("DİKKAT!");
+                builder.setMessage("Lütfen adınızı kaydediniz.");
+                builder.setPositiveButton("TAMAM", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                    }
+                });
+                builder.show();*/
+                final Dialog dialog = new Dialog(this);
+                dialog.setContentView(R.layout.uyari);
+                Button button6 = (Button) dialog.findViewById(R.id.button6);
+                Button button7 = (Button) dialog.findViewById(R.id.button7);
+                TextView textAlert = (TextView) dialog.findViewById(R.id.textAlert);
+                TextView textTitle = (TextView) dialog.findViewById(R.id.textTitle);
+                ImageView kus = (ImageView) dialog.findViewById(R.id.imageView10);
+                textTitle.setText(R.string.dikkat);
+                textAlert.setText(R.string.lütfen_adınızı_kaydediniz_ya_da_kayıtlı_adınızı_giriniz);
+                button6.setText(R.string.tamam);
+                button7.setVisibility(View.INVISIBLE);
+                kus.setImageResource(R.drawable.kus);
+                button6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
         }
         else if(editText.getText().toString().trim().length()==0) {
             /*AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
